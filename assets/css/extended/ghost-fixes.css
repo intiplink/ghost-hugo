@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "firasans-medium";
+  src: url("/fonts/FiraSans-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "quicksand";
+  src: url("/fonts/Quicksand-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "firasans-condensed";
+  src: url("/fonts/FiraSansCondensed-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+    font-family: firasans-medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: quicksand;
+}
+
+#menu, .toc, .paginav .title, .entry-footer, .post-meta, .breadcrumbs {
+    font-family: firasans-condensed;
+}
