@@ -1,0 +1,17 @@
+{
+	"name": "hugo-ghost",
+	"scripts": {
+		"build": "node fetchData.js prod && hugo --gc",
+		"dev": "node fetchData.js dev && hugo server --gc",
+		"test": "node fetchData.js test"
+	},
+	"dependencies": {
+		"@guyplusplus/turndown-plugin-gfm": "^1.0.7",
+		"@tryghost/content-api": "^1.11.16",
+		"axios": "^1.5.0",
+		"fs-extra": "^11.1.1",
+		"js-yaml": "^4.1.0",
+		"sharp": "^0.32.5",
+		"turndown": "^7.1.2"
+	}
+}
