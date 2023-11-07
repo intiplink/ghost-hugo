@@ -154,10 +154,9 @@ const siteConfig = async () => {
     // downloadImage(settings.cover_image, 'static/cover.webp', 'webp');
     // config.params.images = '/cover.webp';
     // favicon
-    downloadImage(settings.icon, 'static/favicon.png', 'png');
-    config.params.assets.favicon = '/favicon.png';
-    config.params.assets.favicon16x16 = '/favicon.png';
-    config.params.assets.favicon32x32 = '/favicon.png';
+    downloadImage(settings.icon, 'static/favicon.png', 'png', 60);
+    config.params.favicon = '/favicon.png';
+    config.params.appleTouchIcon = '/favicon.png';
 
     fs.writeFileSync('config.yml', yaml.dump(config));
 }
@@ -172,14 +171,13 @@ const checkFolder = () => {
 }
 
 // download gamber dan convert ke format yg diinginkan
-async function downloadImage(url, filename, format) {
+async function downloadImage(url, filename, format, resize) {
   const response = await axios.get(url, { responseType: 'arraybuffer' });
-  if(format == 'png') { // biasnaya png ada alpha channel. skip.
-    fs.writeFileSync(filename, Buffer.from(response.data, 'binary'));
-  } else { // convert
-    const image = await sharp(response.data).toFormat(format);
-    await image.toFile(filename);
+  const image = await sharp(response.data).toFormat(format);
+  if(resize) {
+    image.resize(width=resize);
   }
+  await image.toFile(filename);
 }
 
 // command untuk dipakai di package.json

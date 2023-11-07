@@ -42,14 +42,6 @@ params:
     showtoc: true
     tocopen: true
 
-    assets:
-        # disableFingerprinting: true
-        favicon: "<link / abs url>"
-        favicon16x16: "<link / abs url>"
-        favicon32x32: "<link / abs url>"
-        # apple_touch_icon: "<link / abs url>"
-        # safari_pinned_tab: "<link / abs url>"
-
     # label:
     #     text: "Home"
     #     icon: /apple-touch-icon.png
@@ -124,9 +116,9 @@ menu:
       url: /categories/
       weight: 10
     - name: Arsip
-      url: arsip/      
+      url: /arsip/
     - name: Cari
-      url: cari/
+      url: /cari/
 
 outputs:
     home:
