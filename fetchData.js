@@ -56,10 +56,14 @@ turndownService.addRule('callout', {
     return `\n\n{{< callout text="${content}" >}}\n\n`;
   }
 });
+// caption
 turndownService.addRule('figcaption', {
   filter:  'figcaption',
-  replacement: function (content) {
-    return `\n\n*${content}*\n\n`;
+  replacement: function (content, node) {
+    // caption untuk kode terdapat <p> dan <span>, jadi perlu dihapus
+    // sedangkan caption untuk gambar tidak ada, jadi masih aman
+    content = node.textContent;
+    return `\n\n{{< figcaption text="${content}" >}}\n\n`;
   }
 });
 
