@@ -71,8 +71,8 @@ params:
         Untuk kode, masih hancur. Ya begitulah.
 
     socialIcons:
-      - name: mastodon
-        url: "https://mstdn.id/@testeraphy"
+      - name: matrix
+        url: "https://matrix.to/#/@testeraphy:nope.chat"
       - name: gotosocial
         url: "https://et.testeraphy.cf/@me"
       - name: github
