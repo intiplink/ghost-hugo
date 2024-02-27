@@ -73,8 +73,8 @@ params:
     socialIcons:
       - name: matrix
         url: "https://matrix.to/#/@testeraphy:nope.chat"
-      - name: gotosocial
-        url: "https://et.testeraphy.cf/@me"
+      - name: sharkey
+        url: "https://shonk.social/@testeraphy"
       - name: github
         url: "https://github.com/intiplink"
       - name: rss
