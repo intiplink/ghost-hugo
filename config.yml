@@ -72,7 +72,7 @@ params:
 
     socialIcons:
       - name: matrix
-        url: "https://matrix.to/#/@testeraphy:nope.chat"
+        url: "https://matrix.to/#/@testeraphy:beeper.com"
       - name: sharkey
         url: "https://shonk.social/@testeraphy"
       - name: github

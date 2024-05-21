@@ -127,6 +127,13 @@ const generateContent = async () => {
             // ikut format PageBundles, jadi simpan ke folder slug dengan nama index.md
             const folderPath = path.join('content/posts', post.slug);
             const filePath = path.join(folderPath, 'index.md'); 
+
+            // Periksa apakah file sudah ada
+            if (await fs.pathExists(filePath)) {
+                console.log(`Skipping post: ${post.slug}`);
+                return; // Lewati post ini
+            }
+
             try {
                 await fs.mkdir(folderPath, { recursive: true });
                 await fs.writeFile(filePath, fileString, { flag: 'w' });
@@ -135,7 +142,7 @@ const generateContent = async () => {
             }
 
             // download cover image, masukkan sesuai pagebudle
-            downloadImage(post.feature_image, `${folderPath}/cover.webp`, 'webp');
+            await downloadImage(post.feature_image, `${folderPath}/cover.webp`, 'webp');
         }));
 
     console.timeEnd('All posts converted to Markdown in');
