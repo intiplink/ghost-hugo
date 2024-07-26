@@ -7,7 +7,7 @@
         {{ safeHTML (index $.svg $icon_name | default $.svg.default) }}
     </a>
     {{- else }}
-    <a href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me" title="{{ .name | title }}">
+    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me" title="{{ .name | title }}">
         {{ safeHTML (index $.svg $icon_name | default $.svg.default) }}
     </a>
     {{- end }}
