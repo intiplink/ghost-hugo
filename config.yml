@@ -27,8 +27,9 @@ params:
     DateFormat: "2 January 2006"
     defaultTheme: auto # dark, light
     # disableThemeToggle: false
-    EnableInstantClick: true
-
+    EnableInstantClick: false
+    EnableInstantPage: true
+    
     ShowReadingTime: true
     ShowShareButtons: false
     ShowPostNavLinks: true
