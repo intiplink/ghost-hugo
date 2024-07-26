@@ -20,6 +20,17 @@
     </main>
     {{ partial "footer.html" . -}}
     {{- block "body_end" . }}{{ end }}
+
+    {{- /*InstantPage.js */}}
+    {{- if (.Param "EnableInstantPage") }}
+    {{- $instantpage := resources.Get "js/instantpage.js" }}
+    {{- if hugo.IsProduction }}
+      {{- $instantpage = minify $instantpage }}
+    {{- end }}
+    <script src="{{ $instantpage.RelPermalink }}" type="module"
+      {{- if site.Params.assets.disableFingerprinting }}integrity="{{ $instantpage.Data.Integrity }}"{{- end }}
+    ></script>
+    {{- end }}
 </body>
 
 </html>
