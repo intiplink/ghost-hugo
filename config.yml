@@ -63,19 +63,11 @@ params:
         #     - name: Tags
         #       url: tags
 
-    # home-info mode
-    homeInfoParams:
-      Title: "Hai \U0001F44B"
-      Content: >-
-        Selamat datang di blog remake dengan menggunakan Hugo, alasannya karena saya tidak bisa mengontrol nextjs.
-        hehe.
-        Untuk kode, masih hancur. Ya begitulah.
-
     socialIcons:
-      - name: matrix
+      - name: beeper
         url: "https://matrix.to/#/@testeraphy:beeper.com"
-      - name: sharkey
-        url: "https://shonk.social/@testeraphy"
+      - name: iceshrimp
+        url: "https://ice.ktem.eu.org/@testeraphy"
       - name: github
         url: "https://github.com/intiplink"
       - name: rss
