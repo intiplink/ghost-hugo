@@ -63,6 +63,12 @@ params:
         #     - name: Tags
         #       url: tags
 
+    # home-info mode
+    homeInfoParams:
+      Title: "Hai \U0001F44B"
+      Content: >-
+        Selamat datang, dan salam kenal!
+
     socialIcons:
       - name: beeper
         url: "https://matrix.to/#/@testeraphy:beeper.com"
